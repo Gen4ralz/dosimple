@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: { domains: ['res.cloudinary.com']['profile.line-scdn.net'] },
+  images: { domains: ['res.cloudinary.com']},
 };
 
 module.exports = nextConfig;

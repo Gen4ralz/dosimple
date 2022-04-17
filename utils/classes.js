@@ -64,12 +64,9 @@ const classes = {
     fontWeight:'bold',
     fontFamily: 'Open Sans',
   },
-  outStock:{
-    opacity: 0.25,
-  },
-  inStock:{
-    opacity: 1,
-  }
+productList: {
+  padding:0
+}
 };
 
 export default classes;

@@ -46,7 +46,7 @@ function Home(props) {
     <Layout>
       <Box>
         <Typography component='h1' variant='h1'>Product</Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={1} sx={classes.productList}>
           {products.map((product) => (
             <Grid item md={4} xs={6} key={product.name}>
               <Card variant="outlined">
