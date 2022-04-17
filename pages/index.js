@@ -45,7 +45,7 @@ function Home(props) {
   return (
     <Layout>
       <Box>
-        <Typography component='h1' variant='h1'>Product</Typography>
+        <Typography component='h2' variant='h2'>Product</Typography>
         <Grid container spacing={1} sx={classes.productList}>
           {products.map((product) => (
             <Grid item md={4} xs={6} key={product.name}>
@@ -57,7 +57,6 @@ function Home(props) {
                         component="img"
                         image={product.image}
                         title={product.name}
-                        sx={product.stock > 0 ? `${classes.inStock}` : `${classes.outStock}`}
                       ></CardMedia>
                       <CardContent>
                         <Typography sx={classes.productName}>

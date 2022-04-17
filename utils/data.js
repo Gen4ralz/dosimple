@@ -64,6 +64,18 @@ const data = {
       stock: 40,
       description: 'A popular sets',
     },
+    {
+      name: 'Blazer Mini Dress Sets',
+      slug: 'blazer-mini-dress-sets',
+      category: 'sets',
+      image: '/images/a-cream.jpg',
+      price: 590,
+      brand: 'Amuse',
+      rating: '4.9',
+      numReviews: 30,
+      stock: 40,
+      description: 'A popular sets',
+    },
   ],
 };
 
