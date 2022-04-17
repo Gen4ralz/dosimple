@@ -65,8 +65,8 @@ const data = {
       description: 'A popular sets',
     },
     {
-      name: 'Blazer Mini Dress Sets',
-      slug: 'blazer-mini-dress-sets',
+      name: 'Blazer Mini Dress',
+      slug: 'blazer-mini-dress',
       category: 'sets',
       image: '/images/a-cream.jpg',
       price: 590,
