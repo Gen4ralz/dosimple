@@ -45,11 +45,11 @@ function Home(props) {
   return (
     <Layout>
       <Box>
-        <Typography component='h2' variant='h2'>Product</Typography>
+        <Typography component='h1' variant='h1'>สินค้า</Typography>
         <Grid container spacing={1} sx={classes.productList}>
           {products.map((product) => (
             <Grid item md={4} xs={6} key={product.name}>
-              <Card variant="outlined">
+              <Card variant="outlined" sx={{borderRadius: 2}}>
                 <NextLink href={`/product/${product.slug}`} passHref>
                   <Link>
                     <CardActionArea>

@@ -55,17 +55,26 @@ function CartScreen() {
   return (
     <Layout title="Shopping Cart">
       <Typography component="h1" variant="h1">
-        Shopping Cart
+      ตะกร้าสินค้าของฉัน
       </Typography>
       {cartItems.length === 0 ? (
         <Box>
-          Cart is empty.
-          <NextLink href="/" passHref>
-            <Link>
-              <Button>Go to Shopping</Button>
-            </Link>
-          </NextLink>
-        </Box>
+        <List>
+          <ListItem sx={classes.cart}>
+          <Image src='https://res.cloudinary.com/dgzsfz6ja/image/upload/v1650300477/empty-shoppingbag_uxzc7w.svg'
+            alt='cart_logo'
+            width={50}
+            height={50}
+            />
+          </ListItem>
+          <ListItem sx={classes.bag}>
+          <Typography sx={classes.bagEmpty}>ไม่มีสินค้าในตะกร้า</Typography>
+          </ListItem>
+          <ListItem sx={classes.cartButton}>
+              <CustomButton variant='contained'><Typography sx={classes.cartFont}>ช้อปเลย</Typography></CustomButton>
+          </ListItem>
+         </List>
+         </Box>
       ) : (
         <Grid container spacing={1}>
           <Grid item md={9} xs={12}>

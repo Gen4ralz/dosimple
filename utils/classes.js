@@ -19,12 +19,13 @@ const classes = {
     },
   },
   toolbar: {
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   brand: {
     fontWeight: 'bold',
     fontSize: '1.5rem',
     fontFamily:'Varela Round',
+    textAlign: 'center',
   },
   section: {
     marginTop: 1,
@@ -71,6 +72,30 @@ productMargin:{
   padding: 0,
   marginLeft: 1,
   justifyContent: 'space-between'
+},
+cart:{
+  justifyContent: 'center',
+  textAlign:'center',
+  paddingTop: 20,
+},
+cartButton:{
+  paddingTop:3,
+  justifyContent: 'center',
+  textAlign:'center',
+},
+cartFont:{
+  fontWeight:'bold',
+  fontFamily: 'Mitr',
+  fontSize:'16px'
+},
+bag:{
+  justifyContent: 'center',
+  textAlign:'center',
+},
+bagEmpty:{
+  fontWeight:'bold',
+  fontFamily: 'Mitr',
+  fontSize:'24px',
 }
 };
 

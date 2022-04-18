@@ -12,6 +12,7 @@ import {
   ThemeProvider,
   Toolbar,
   Typography,
+  IconButton,
 } from '@mui/material';
 import jsCookie from 'js-cookie';
 import Head from 'next/head';
@@ -22,6 +23,7 @@ import classes from '../utils/classes';
 import { Store } from '../utils/Store';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import PersonIcon from '@mui/icons-material/Person';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Layout({ children, title, description }) {
   const router = useRouter();
@@ -39,9 +41,9 @@ export default function Layout({ children, title, description }) {
     typography: {
       h1: {
         fontSize: '1.6rem',
-        fontWeight: 'bold',
+        fontWeight: 200,
         margin: '1rem 0',
-        fontFamily:'Urbanist',
+        fontFamily:'Mitr',
       },
       h2: {
         fontSize: '1.2rem',
@@ -95,6 +97,15 @@ export default function Layout({ children, title, description }) {
         <CssBaseline />
         <AppBar position="static" sx={classes.appbar}>
           <Toolbar sx={classes.toolbar}>
+            <Box display="flex" alignItems="left">
+            <IconButton
+                edge="start"
+                aria-label="open drawer"
+                sx={classes.menuButton}
+              >
+                <MenuIcon sx={classes.navbarButton} />
+              </IconButton>
+            </Box>
             <Box display="flex" alignItems="center">
               <NextLink href="/" passHref>
                 <Link>
@@ -102,7 +113,7 @@ export default function Layout({ children, title, description }) {
                 </Link>
               </NextLink>
             </Box>
-            <Box alignItems="center" display='flex'>
+            <Box alignItems="right" display='flex'>
               <NextLink href="/cart" passHref sx={classes.iconNavbar}>
                 <Link>
                   {cart.cartItems.length > 0 ? (
