@@ -27,6 +27,7 @@ import { useSnackbar } from 'notistack';
 import { useRouter } from 'next/router';
 import CustomButton from '../components/Button';
 import classes from '../utils/classes';
+import EmptyButton from '../components/EmptyCartButton';
 
 function CartScreen() {
   const router = useRouter();
@@ -52,6 +53,10 @@ function CartScreen() {
   const checkoutHandler = () => {
     router.push('/shipping');
   };
+  const goshoppingHandler = () => {
+    router.push('/');
+  };
+
   return (
     <Layout title="Shopping Cart">
       <Typography component="h1" variant="h1">
@@ -71,7 +76,7 @@ function CartScreen() {
           <Typography sx={classes.bagEmpty}>ไม่มีสินค้าในตะกร้า</Typography>
           </ListItem>
           <ListItem sx={classes.cartButton}>
-              <CustomButton variant='contained'><Typography sx={classes.cartFont}>ช้อปเลย</Typography></CustomButton>
+              <EmptyButton variant='contained' onClick={goshoppingHandler}><Typography sx={classes.cartFont}>ช้อปเลย</Typography></EmptyButton>
           </ListItem>
          </List>
          </Box>

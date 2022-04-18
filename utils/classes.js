@@ -82,6 +82,7 @@ cartButton:{
   paddingTop:3,
   justifyContent: 'center',
   textAlign:'center',
+  boxShadow: 'none',
 },
 cartFont:{
   fontWeight:'bold',
