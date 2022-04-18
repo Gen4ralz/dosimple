@@ -15,32 +15,32 @@ import NextLink from 'next/link';
 import classes from '../utils/classes';
 import db from '../utils/db';
 import Product from '../models/Product';
-import { useRouter } from 'next/router';
-import axios from 'axios';
-import { useSnackbar } from 'notistack';
-import { useContext } from 'react';
-import { Store } from '../utils/Store';
+// import { useRouter } from 'next/router';
+// import axios from 'axios';
+// import { useSnackbar } from 'notistack';
+// import { useContext } from 'react';
+// import { Store } from '../utils/Store';
 import dynamic from 'next/dynamic';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 function Home(props) {
-  const router = useRouter();
-  const { state, dispatch } = useContext(Store);
+  // const router = useRouter();
+  // const { state, dispatch } = useContext(Store);
   const { products } = props;
-  const { enqueueSnackbar } = useSnackbar();
+  // const { enqueueSnackbar } = useSnackbar();
 
-  const addToCartHandler = async (product) => {
-    const existItem = state.cart.cartItems.find((x) => x._id === product._id);
-    const quantity = existItem ? existItem.quantity + 1 : 1;
-    const { data } = await axios.get(`/api/products/${product._id}`);
-    if (data.stock < quantity) {
-      enqueueSnackbar('Sorry . Product is out of stock', { variant: 'error' });
-      return;
-    }
-    enqueueSnackbar(`${product.name} added to cart`, { variant: 'success' });
-    dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
-    router.push('/cart');
-  };
+  // const addToCartHandler = async (product) => {
+  //   const existItem = state.cart.cartItems.find((x) => x._id === product._id);
+  //   const quantity = existItem ? existItem.quantity + 1 : 1;
+  //   const { data } = await axios.get(`/api/products/${product._id}`);
+  //   if (data.stock < quantity) {
+  //     enqueueSnackbar('Sorry . Product is out of stock', { variant: 'error' });
+  //     return;
+  //   }
+  //   enqueueSnackbar(`${product.name} added to cart`, { variant: 'success' });
+  //   dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
+  //   router.push('/cart');
+  // };
 
   return (
     <Layout>
@@ -58,7 +58,7 @@ function Home(props) {
                         image={product.image}
                         title={product.name}
                       ></CardMedia>
-                      <CardContent>
+                      <CardContent sx={classes.productMargin}>
                         <Typography sx={classes.productName}>
                           {product.name}
                         </Typography>
@@ -66,10 +66,10 @@ function Home(props) {
                     </CardActionArea>
                   </Link>
                 </NextLink>
-                <CardActions sx={classes.toolbar}>
+                <CardActions sx={classes.productMargin}>
                   <Typography sx={classes.price}>฿ {product.price}</Typography>
-                  <IconButton aria-label="add to cart" color='primary' onClick={() => addToCartHandler(product)}>
-          <ShoppingBagOutlinedIcon />
+                  <IconButton aria-label="add to cart" color='primary'>
+          <FavoriteBorderIcon />
         </IconButton>
                 </CardActions>
               </Card>

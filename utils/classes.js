@@ -5,9 +5,9 @@ const classes = {
     // backgroundColor: '#F5F5F5',
   },
   footer: {
-    marginTop: 5,
+    marginTop: 2,
     textAlign: 'center',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Urbanist',
     marginBottom: 1,
     // backgroundColor: '#F5F5F5',
   },
@@ -32,7 +32,7 @@ const classes = {
   },
   productName: {
     fontColor: 'black',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Urbanist',
     fontSize: '1rem',
   },
   smallText: {
@@ -62,10 +62,15 @@ const classes = {
   },
   price: {
     fontWeight:'bold',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Urbanist',
   },
 productList: {
   padding:0
+},
+productMargin:{
+  padding: 0,
+  marginLeft: 1,
+  justifyContent: 'space-between'
 }
 };
 

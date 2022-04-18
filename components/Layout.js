@@ -41,12 +41,13 @@ export default function Layout({ children, title, description }) {
         fontSize: '1.6rem',
         fontWeight: 'bold',
         margin: '1rem 0',
-        fontFamily:'Open Sans',
+        fontFamily:'Urbanist',
       },
       h2: {
         fontSize: '1.2rem',
         fontWeight: 400,
         margin: '1rem 0',
+        fontFamily:'Urbanist',
       },
     },
     palette: {
@@ -170,6 +171,9 @@ export default function Layout({ children, title, description }) {
         <Container component="main" sx={classes.main}>
           {children}
         </Container>
+        <Box sx={classes.footer}>
+          <Typography>Made with 💕 by Dosimple</Typography>
+        </Box>
       </ThemeProvider>
     </>
   );
