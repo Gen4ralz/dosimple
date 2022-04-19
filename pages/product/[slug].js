@@ -52,7 +52,7 @@ function ProductScreen(props) {
         <NextLink href="/" passHref>
           <Link>
             <Button>
-              <Typography>back to products</Typography>
+              <Typography sx={classes.cartFont}>หน้าหลัก</Typography>
             </Button>
           </Link>
         </NextLink>
@@ -68,7 +68,7 @@ function ProductScreen(props) {
           />
         </Grid>
         <Grid item md={3} xs={12}>
-          <Card variant="outlined">
+          <Card variant="outlined" sx={{borderRadius: 2}}>
             <List>
               <ListItem>
                 <Typography component="h1" variant="h1">
@@ -76,15 +76,12 @@ function ProductScreen(props) {
                 </Typography>
               </ListItem>
               <ListItem>
-                <Typography>Category: {product.category}</Typography>
+                <Typography sx={classes.description}>{product.description}</Typography>
               </ListItem>
               <ListItem>Brand: {product.brand}</ListItem>
               <ListItem>
                 <Rating value={product.rating} precision={0.25} readOnly />
                 {product.rating} &nbsp; ({product.numReviews} reviews)
-              </ListItem>
-              <ListItem>
-                <Typography> Description: {product.description}</Typography>
               </ListItem>
             </List>
           </Card>
@@ -117,7 +114,7 @@ function ProductScreen(props) {
                   color={product.stock > 0 ? 'primary' : 'secondary'}
                   onClick={addToCartHandler}
                 >
-                  {product.stock > 0 ? 'Add to Cart' : 'Out of stock'}
+                  <Typography sx={classes.cartFont}>{product.stock > 0 ? 'เพิ่มลงในตะกร้า' : 'สินค้าหมด'}</Typography>
                 </CustomButton>
               </ListItem>
             </List>

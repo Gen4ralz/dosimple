@@ -97,6 +97,10 @@ bagEmpty:{
   fontWeight:'bold',
   fontFamily: 'Mitr',
   fontSize:'24px',
+},
+description:{
+  fontFamily: 'Mitr',
+  fontWeight: 300,
 }
 };
 
